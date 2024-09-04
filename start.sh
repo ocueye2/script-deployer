@@ -13,7 +13,7 @@ log "Updating package lists..."
 sudo apt update -y
 
 log "Installing Python venv package..."
-sudo apt install -y python3.10-venv
+sudo apt install -y python3.10
 
 # Check if Python3.10 is installed
 if ! command -v python3.10 &>/dev/null; then
