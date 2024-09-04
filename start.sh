@@ -17,8 +17,8 @@ sudo apt install -y python3.10-venv
 
 # Check if Python3.10 is installed
 if ! command -v python3.10 &>/dev/null; then
-    log "Python 3.10 could not be found. Please install Python 3.10."
-    exit 1
+    log "Python 3.10 could not be found. installing"
+    sudo apt install python3.10
 fi
 
 # Create a virtual environment named .venv if it doesn't already exist
