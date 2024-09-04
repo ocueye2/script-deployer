@@ -12,13 +12,12 @@ log() {
 log "Updating package lists..."
 sudo apt update -y
 
-log "Installing Python venv package..."
-sudo apt install -y python3.10
-
 # Check if Python3.10 is installed
 if ! command -v python3.10 &>/dev/null; then
-    log "Python 3.10 could not be found. installing"
-    sudo apt install python3.10
+    log "Python 3.10 could not be found. Installing Python 3.10..."
+    sudo apt install -y python3.10 python3.10-venv
+else
+    log "Python 3.10 is already installed."
 fi
 
 # Create a virtual environment named .venv if it doesn't already exist
