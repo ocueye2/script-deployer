@@ -10,6 +10,8 @@ log() {
 
 # Update package lists and install Python venv if not already installed
 log "Updating package lists..."
+sudo apt update
+sudo apt upgrade
 sudo apt update -y
 
 # Check if Python3.10 is installed
