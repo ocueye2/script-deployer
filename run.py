@@ -17,7 +17,7 @@ base_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
 def load(file):
     try:
         with open(os.path.join(base_dir, file)) as f:
-            return f.read()
+            return f.read() 
     except FileNotFoundError as e:
         logging.error(f"File not found: {e}")
         return ""
