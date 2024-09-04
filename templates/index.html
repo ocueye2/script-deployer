@@ -10,7 +10,7 @@
                 <h1>Running</h1>
             % for i in running:
             <div class="service">
-                <form action="/proxy/1232" method="get">
+                <form action="/" method="get">
                     <input type="hidden" name="cmd" value="${i}">
                     <button type="submit">${i}</button>
                 </form>
@@ -22,7 +22,7 @@
             <h1>Stopped</h1>
         % for i in stopped:
             <div class="service">
-                <form action="/proxy/1232" method="get">
+                <form action="/" method="get">
                     <input type="hidden" name="cmd" value="${i}">
                     <button type="submit">${i}</button>
                 </form>
