@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scripts</title>
+</head>
+<body>
+    <div class="groups">
+        <div class="services">
+                <h1>Running</h1>
+            % for i in running:
+            <div class="service">
+                <form action="/proxy/1232" method="get">
+                    <input type="hidden" name="cmd" value="${i}">
+                    <button type="submit">${i}</button>
+                </form>
+            </div>
+            % endfor
+
+        </div>
+        <div class="services">
+            <h1>Stopped</h1>
+        % for i in stopped:
+            <div class="service">
+                <form action="/proxy/1232" method="get">
+                    <input type="hidden" name="cmd" value="${i}">
+                    <button type="submit">${i}</button>
+                </form>
+            </div>
+            % endfor
+        </div>
+        
+
+
+        
+    </div>
+
+
+
+
+
+</body>
