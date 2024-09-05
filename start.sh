@@ -15,11 +15,10 @@ sudo apt update
 
 # Check if Python3.10 is installed
 if ! command -v python3.10 &>/dev/null; then
-    log "Python 3.10 could not be found. Installing Python 3.10..."
+    log "Python 3.10 could not be found. Installing Python 3.10 from savoury1"
+    sudo add-apt-repository ppa:savoury1/python
     sudo apt update
-    sudo apt install software-properties-common -y
-    sudo add-apt-repository ppa:deadsnakes/ppa
-    sudo apt update
+    sudo apt-get install python3.10
 else
     log "Python 3.10 is already installed."
 fi
