@@ -11,13 +11,15 @@ log() {
 # Update package lists and install Python venv if not already installed
 log "Updating package lists..."
 sudo apt update
-sudo apt upgrade
-sudo apt update -y
+
 
 # Check if Python3.10 is installed
 if ! command -v python3.10 &>/dev/null; then
     log "Python 3.10 could not be found. Installing Python 3.10..."
-    sudo apt install -y python3.10 python3.10-venv
+    sudo apt update
+    sudo apt install software-properties-common -y
+    sudo add-apt-repository ppa:deadsnakes/ppa
+    sudo apt update
 else
     log "Python 3.10 is already installed."
 fi
